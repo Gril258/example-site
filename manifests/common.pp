@@ -100,7 +100,7 @@ class common (
 
   # set up puppet agent
   if ($::fqdn != "puppet.infra.${location}") {
-    class { 'puppet_agent':
+    class { '::puppetnode::agent':
       env    => $env,
       server => "puppet.infra.${location}"
     }

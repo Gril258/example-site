@@ -154,7 +154,7 @@ node /^(puppet)\.(infra)\.([a-z]+)$/ {
     location    => $location,
   }
 
-  include puppet_master
+  include ::puppetnode::master
 
   #node resources
 }
